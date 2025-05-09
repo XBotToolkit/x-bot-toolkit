@@ -1,9 +1,9 @@
 # X Bot Toolkit
-A Python-based bot for X (formerly Twitter) that generates original, viral content to drive authentic user engagement. Built with a dynamic, evolving persona (sassy influencer with a "bro" vibe), it uses the Grok API to craft tweets, a graph-based memory system for continuity, and aligns with xAI’s mission of advancing human-AI collaboration. Hosted at https://github.com/XBotToolkit/x-bot-toolkit.
+A Python-based bot for X (formerly Twitter) that generates original, viral content to drive authentic user engagement. Built with a dynamic, evolving persona, it uses the Grok API to craft tweets, a graph-based memory system for continuity, and aligns with xAI’s mission of advancing human-AI collaboration. Hosted at https://github.com/XBotToolkit/x-bot-toolkit.
 
 ## Features
 Viral Content: Generates edgy, meme-heavy tweets based on X trends, designed to spark replies and retweets.
-Dynamic Persona: Evolves monthly (e.g., chill to savage) with a consistent "sophisticated influencer" voice, enforced via structured prompts.
+Dynamic Persona: Evolves continuously with a consistent "sophisticated influencer" voice, enforced via structured prompts.
 Graph Memory: Stores interactions in a JSON-based graph for coherent callbacks and persona evolution.
 Grok API Integration: Chains queries to analyze trends, craft tweets, and refine outputs for maximum engagement.
 Cloud-Ready: Runs on servers (e.g., AWS EC2) with secure API key management via python-dotenv.
@@ -37,23 +37,12 @@ X_ACCESS_TOKEN_SECRET=your_access_token_secret
 GROK_API_KEY=your_grok_api_key
 
 
-
 ## Usage
 
 Run the Bot:
 python bot.py
 
 The bot will analyze X trends, generate tweets, and post them with random delays to mimic human behavior.
-
-Update Persona:Edit PERSONA_CONFIG in bot.py to evolve the bot’s tone, edginess, or humor style monthly. Example:
-PERSONA_CONFIG = {
-    "tone": "savage",
-    "edginess": 0.9,
-    "humor_style": "meme-heavy",
-    "topics": ["drama", "tech", "memes"],
-    "last_updated": "2025-06-01"
-}
-
 
 Monitor Logs:Check console output for posted tweets or errors. Deploy with a process manager (e.g., pm2) for persistence.
 
@@ -68,8 +57,6 @@ README.md: This file.
 ## How It Works
 
 Trend Analysis: Uses Grok API to identify the top 5 trending topics on X.
-Tweet Generation: Crafts a meme-heavy tweet with a sassy “bro” vibe, tied to a trending topic.
-Persona Enforcement: Structured prompts ensure a consistent influencer persona, evolving monthly.
 Memory Graph: Logs tweets and interactions in a JSON graph for callbacks and trend tracking.
 X Posting: Posts via Tweepy with random delays to avoid bot-like patterns.
 
